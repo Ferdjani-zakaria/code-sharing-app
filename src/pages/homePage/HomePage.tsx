@@ -50,9 +50,11 @@ export const HomePage: FC = () => {
         const fetchData = async () => {
             try {
                 // Fetch data from the database based on the ID
-                const result = await fetchDataFromDatabase(id);
-                setLang(`${result.language}`);
-                setCode(result.editorValue);
+                if (id) {
+                    const result = await fetchDataFromDatabase(id);
+                    setLang(`${result.language}`);
+                    setCode(result.editorValue);
+                }
             } catch (error) {
                 console.error("Error fetching data:", error);
             }
@@ -86,7 +88,7 @@ export const HomePage: FC = () => {
         setLang(newLang);
     };
 
-    const handleEditorDidMount = (_editor, monaco) => {
+    const handleEditorDidMount = (_editor: any, monaco: any) => {
         monacoRef.current = monaco;
     };
 
@@ -115,7 +117,7 @@ export const HomePage: FC = () => {
                         language={lang}
                         defaultValue={code}
                         theme={theme}
-                        onChange={(value) => setCode(value)}
+                        onChange={(value) => setCode(value || "")}
                         onMount={handleEditorDidMount}
                     />
                     <div className={styles.configContainer}>
