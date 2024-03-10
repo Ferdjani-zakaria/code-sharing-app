@@ -1,0 +1,94 @@
+@font-face {
+    font-family: "Outfit";
+    src: url(../../../assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+}
+
+.editorContainer {
+    position: relative;
+    padding: 1.5rem 1rem;
+    border-radius: 1rem;
+    width: 90%;
+    max-width: 850px;
+
+    // Default background color
+    background-color: #fffffe;
+
+    // Conditional background color based on theme
+    &[data-theme="vs-dark"] {
+        background-color: #121826;
+    }
+
+    .editor {
+        height: 600px;
+    }
+
+    .configContainer {
+        display: flex;
+        width: 95%;
+        margin: auto;
+        justify-content: space-between;
+        align-items: center;
+
+        select {
+            margin-right: 0.625rem;
+            font-size: 0.625rem;
+            font-family: "Outfit";
+            background-color: #ced6e1;
+            border: none;
+            border-radius: 1rem;
+            padding-block: 0.3rem;
+            min-width: 5rem;
+            outline: none;
+            cursor: pointer;
+            letter-spacing: 1px;
+
+            option {
+                font-size: 0.7rem;
+                text-align: center;
+            }
+        }
+
+        .shareContainer {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 0.5rem;
+            width: min(45rem, 50%);
+
+            p {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+
+                margin: 0;
+                color: hsl(215, 24%, 50%);
+                cursor: pointer;
+
+                &:active {
+                    color: #121826;
+                }
+            }
+
+            .shareBtn {
+                font-size: 1rem;
+                background-color: #406aff;
+                outline: none;
+                border-radius: 2rem;
+                padding: 0.5rem 1.5rem;
+                border: none;
+                color: #fffffe;
+                cursor: pointer;
+                font-family: "Outfit";
+                min-width: 7.5rem;
+
+                &:disabled {
+                    background-color: hsl(215, 24%, 40%);
+                    cursor: auto;
+                }
+                svg {
+                    margin-right: 0.5rem; // Adjust spacing between icon and text
+                }
+            }
+        }
+    }
+}

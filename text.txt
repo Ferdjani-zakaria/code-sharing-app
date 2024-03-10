@@ -1,0 +1,22 @@
+{/* <MonacoEditorR
+                        code={code}
+                        isShared={isShared}
+                        link={link}
+                        onValueChange={(codevalue) =>
+                            setCode({ ...code, value: codevalue })
+                        }
+                        onLangueChange={(codeLang) =>
+                            setCode({ ...code, language: codeLang })
+                        }
+                        onShare={() => setIsShared((prev) => !prev)}
+                    /> */}
+                    {/* <MonacoEditor
+                        code={code}
+                        isShared={isShared}
+                        onChange={(codevalue) => setCode({ ...code, value: codevalue })}
+                        onLangueChange={(codeLang) =>
+                            setCode({ ...code, language: codeLang })
+                        }
+                        onShare={() => setIsShared((prev) => !prev)}
+                        link={link}
+                    /> */}

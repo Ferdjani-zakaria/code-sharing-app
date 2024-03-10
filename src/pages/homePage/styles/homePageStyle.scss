@@ -1,0 +1,41 @@
+@font-face {
+    font-family: "Outfit";
+    src: url(../../../assets/fonts/outfit/static/Outfit-SemiBold.ttf);
+}
+
+.blue {
+    background-image: linear-gradient(
+        to bottom right,
+        rgba(183, 135, 245, 1),
+        rgba(116, 62, 228, 1)
+    );
+    height: 150vh;
+}
+
+.homePageContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1rem;
+    gap: 1rem;
+    font-family: "Outfit";
+    background-image: url(../../../assets/img/Hero-Background-notecode.svg);
+    background-repeat: repeat-x;
+    overflow: hidden;
+
+    .homepageHeaderContainer {
+        text-align: center;
+    }
+
+    &:is(h1, h2) {
+        font-weight: 600;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 2rem;
+    }
+}
