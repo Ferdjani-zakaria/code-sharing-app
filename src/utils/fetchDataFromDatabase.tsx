@@ -1,6 +1,8 @@
 export const fetchDataFromDatabase = async (id: string) => {
     try {
-        const response = await fetch(`http://localhost:5050/api/${id}`);
+        const response = await fetch(
+            `https://code-sharing-server.onrender.com/api/${id}`
+        );
         if (!response.ok) {
             throw new Error("Failed to fetch data");
         }
